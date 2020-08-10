@@ -1,0 +1,52 @@
+{
+	"auto_highlight" : true,
+
+	"log_list" : {
+
+		"Log4j" :
+		{
+			"type"         : "system", // "compile" - link, bookmark (icon) are usable, "system" - only for highlight
+			"extension"    : [ "*.log", "*.txt" ],
+			"severity" :
+			{
+				"warn" : { 
+					"enable"  : true,
+					"pattern" : [
+						[ "[^<]+(?-i) WARN", "[\\r\\n]" ],
+					],
+					"color" : {
+						"base"  : ["#FF9900", ""]
+					},
+				},
+				"error" : { 
+					"enable"  : true,
+					"pattern" : [
+						[ "[^<]+(?-i) ERROR", "[\\r\\n]" ],
+					],
+					"color" : {
+						"base"  : ["#F92672", ""]
+					},
+				},
+				"debug" : { 
+					"enable"  : true,
+					"pattern" : [
+						[ "[^<]+(?-i) DEBUG", "[\\r\\n]" ],
+					],
+					"color" : {
+						"base"  : ["#A8A8A8", ""]
+					},
+				},
+				"exception with stacktrace" : { 
+					"enable"  : true,
+					"pattern" : [
+						[ "[^<]+(?i)exception", "[\\r\\n]" ],
+						[ "^\\t(at )(.*)$", "[\\r\\n]" ],
+					],
+					"color" : {
+						"base"  : ["#C5D47B", ""]
+					},
+				},
+			},
+		}
+	},
+}
